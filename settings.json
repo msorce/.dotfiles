@@ -1,0 +1,162 @@
+{
+    /***************************************************************************
+    GENERAL
+    ***************************************************************************/
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        // for work
+        "**/localdocs": true,
+        "**/common": true,
+        "**/messages": true,
+        "**/misc": true,
+        "**/assortment": true,
+        "**/war/target": true,
+        "**/war/src/test": true
+    },
+
+    /***************************************************************************
+    EDITOR
+    ***************************************************************************/
+    "window.zoomLevel": 0,
+    "editor.fontSize": 13,
+    "editor.rulers": [80],
+    "editor.lineHeight": 23,
+    "editor.letterSpacing": 1,
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "on",
+    "editor.matchBrackets": true,
+    "editor.formatOnPaste": false,
+    "editor.fontLigatures": true,
+    "editor.tabCompletion": false,
+    "editor.mouseWheelZoom": false,
+    "editor.minimap.enabled": true,
+    "editor.cursorBlinking": "solid",
+    "editor.trimAutoWhitespace": true,
+    "editor.snippetSuggestions": "top",
+    "editor.renderLineHighlight": "all",
+    "editor.occurrencesHighlight": false,
+    "editor.fontFamily": "Input-Regular",
+    "editor.showFoldingControls": "always",
+    "editor.renderControlCharacters": true,
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.renderWhitespace": "all",
+
+    /***************************************************************************
+        WORKBENCH
+    ***************************************************************************/
+    "workbench.statusBar.feedback.visible": false,
+    "workbench.statusBar.visible": true,
+    "workbench.tips.enabled": false,
+    "workbench.fontAliasing": "auto",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Dracula Soft",
+    "workbench.editor.labelFormat": "default",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+
+    // custom theme
+    "workbench.colorCustomizations": {
+        //   "editor.background": "#111",
+        //   "statusBar.background": "#000",
+        //   "sideBar.background": "#000",
+        //   "input.background": "#000",
+        //   "dropdown.background": "#000",
+        //   "input.border": "#333",
+        //   "dropdown.border": "#333",
+        "editorCursor.foreground": "#f00"
+    },
+
+    /***************************************************************************
+        FILES
+    ***************************************************************************/
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    /***************************************************************************
+    WINDOW
+    ***************************************************************************/
+    "window.restoreWindows": "none",
+    "window.restoreFullscreen": true,
+    "window.title": "${activeEditorLong}",
+    "window.newWindowDimensions": "maximized",
+
+    /***************************************************************************
+    EXPLORER
+    ***************************************************************************/
+    "explorer.openEditors.visible": 0,
+    "explorer.autoReveal": false,
+    "explorer.sortOrder": "type",
+
+    /***************************************************************************
+    EXTENSIONS
+    ***************************************************************************/
+
+    // EMMET
+    "emmet.includeLanguages": {
+        "ftl": "html"
+    },
+
+    // VSCODE ICONS
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+
+    // HIGHLIGHT MATCHING TAG
+    "highlight-matching-tag.leftStyle": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "white",
+        "borderRadius": "5px"
+    },
+    "highlight-matching-tag.rightStyle": {
+        "borderWidth": "1px",
+        "borderStyle": "solid",
+        "borderColor": "white",
+        "borderRadius": "5px"
+    },
+
+    // BEAUTIFY
+    "beautify.language": {
+        "js": {
+            "type": [
+                "javascript",
+                "json"
+            ],
+            "filename": [
+                ".jshintrc",
+                ".jsbeautify"
+            ]
+        },
+        "css": [
+            "css",
+            "scss",
+            "sass"
+        ],
+        "html": [
+            "htm",
+            "html",
+            "ftl"
+        ]
+    },
+
+    // SETTINGS SYNC
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": true,
+    "sync.autoUpload": false,
+    "sync.askGistName": false,
+    "sync.autoDownload": false,
+    "sync.forceDownload": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.lastUpload": "2018-04-18T17:02:34.794Z",
+    "sync.lastDownload": "2017-10-23T21:23:39.662Z",
+    "sync.gist": "f94a71de581b06649e1c193fea5e04e3",
+}
