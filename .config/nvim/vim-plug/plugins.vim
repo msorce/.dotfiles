@@ -7,6 +7,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
+  Plug 'liuchengxu/vim-which-key'
   " Stable version of coc
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " Better Syntax Support

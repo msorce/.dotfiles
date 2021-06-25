@@ -27,6 +27,7 @@ alias cler="clear"
 alias weather="curl wttr.in"
 alias missing="svn st | grep ! | cut -d! -f2| sed 's/^ *//' | sed 's/^/\"/g' | sed 's/$/\"/g' | xargs svn rm"
 alias fixboilerplate="git branch --set-upstream-to=origin/master master && git pull --allow-unrelated-histories"
+alias rm="rm -v"
 ## functions
 # auto ls
 function chpwd() {
