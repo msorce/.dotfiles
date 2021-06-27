@@ -27,60 +27,22 @@ alias cler="clear"
 alias weather="curl wttr.in"
 alias missing="svn st | grep ! | cut -d! -f2| sed 's/^ *//' | sed 's/^/\"/g' | sed 's/$/\"/g' | xargs svn rm"
 alias fixboilerplate="git branch --set-upstream-to=origin/master master && git pull --allow-unrelated-histories"
-alias rm="rm -v"
+alias rm="rm -rf -v"
 ## functions
 # auto ls
 function chpwd() {
     emulate -L zsh
     ls -a
 }
-ossa() {
-    echo "Cloning github.wsgc.com:eCommerce-Ossa/ossa-boilerplate.git"
-    git clone git@github.wsgc.com:msorce/ossa-boilerplate.git
 
-    echo "Renaming the ossa-boilerplate folder to $@"
-    mv ossa-boilerplate "$@";
-
-    echo "Changing directory => $@"
-    cd "$@";
-
-    echo "Deleting the .git folder"
-    rm -rf .git;
-
-    echo "Initializing git"
-    git init;
-
-    echo "Updating package.json name description and git repo"
-    sed -i '' '/"name":/ s/"name":[^,]*/"name":"'$@'"/' package.json
-
-    sed -i '' '/"description":/ s/"description":[^,]*/"description":"'$@' - for rapid experimentation"/' package.json
-
-    sed -i '' 's/git@github.wsgc.com:eCommerce-Ossa\/ossa-boilerplate.git/git@github.wsgc.com:eCommerce-Ossa\/'$@'.git/g' package.json
-
-    echo "<h1>$@</h1> This project was bootstrapped with <a href="https://github.wsgc.com/eCommerce-Ossa/ossa-boilerplate">ossa-boilerplate</a>" > README.md
-
-    echo "git add ."
-    git add .;
-
-    echo "Committing using 'initial setup; as  message";
-    git commit -m 'initial setup';
-
-    echo "Adding remote origin"
-    git remote add origin git@github.wsgc.com:eCommerce-Ossa/"$@".git;
-    echo "Pushing to -u origin master"
-    git push -u origin master
-
-    npm install
-}
-
-# cat << "banner"
-#    ____  __         __    _    __  ___           __   __
-#   / __ \/ /_       / /_  (_)  /  |/  /___ ______/ /__/ /
-#  / / / / __ \     / __ \/ /  / /|_/ / __ `/ ___/ //_/ /
-# / /_/ / / / /    / / / / /  / /  / / /_/ / /  / ,< /_/
-# \____/_/ /_( )  /_/ /_/_/  /_/  /_/\__,_/_/  /_/|_(_)
-#            |/
-# banner
+ cat << "banner"
+    ____  __         __    _    __  ___           __   __
+   / __ \/ /_       / /_  (_)  /  |/  /___ ______/ /__/ /
+  / / / / __ \     / __ \/ /  / /|_/ / __ `/ ___/ //_/ /
+ / /_/ / / / /    / / / / /  / /  / / /_/ / /  / ,< /_/
+ \____/_/ /_( )  /_/ /_/_/  /_/  /_/\__,_/_/  /_/|_(_)
+            |/
+banner
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
