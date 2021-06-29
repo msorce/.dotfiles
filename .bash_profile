@@ -11,6 +11,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 alias vim="nvim"
 alias vi="nvim"
+alias vimrc="nvim ~/.config/nvim/"
 alias upall="brew update --verbose && brew upgrade --verbose && brew doctor --verbose && brew cleanup --prune-prefix --verbose "
 alias memory="export MAVEN_OPTS='-Xmx8192m -Xms8192m -XX:MaxPermSize=8192m' && echo 'memory increased 8192m 🤞 😅'"
 alias svn up="svn up --depth infinity"

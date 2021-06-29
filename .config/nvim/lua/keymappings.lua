@@ -1,6 +1,7 @@
 -- helpers
 local silent = {silent = true}
 local silentNoremap = {noremap = true, silent = true}
+local silentExpNoremap = {noremap=true, expr = true, silent = true}
 local remap = function(mode, original, new, config)
 	vim.api.nvim_set_keymap(mode, original, new, config)
 end
@@ -29,3 +30,7 @@ remap('x', '<C-k>', [[:m '<-2<CR>gv=gv]], silentNoremap)
 -- Switch buffer tab
 remap('n', '<TAB>', ':bnext<CR>', silentNoremap)
 remap('n', '<S-TAB>', ':bprevious<CR>', silentNoremap)
+
+--Remap for dealing with word wrap
+remap('n', 'k', "v:count == 0 ? 'gk' : 'k'", silentExpNoremap)
+remap('n', 'j', "v:count == 0 ? 'gj' : 'j'", silentExpNoremap)

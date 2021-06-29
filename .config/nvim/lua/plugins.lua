@@ -24,6 +24,19 @@ return require('packer').startup(function(use)
   -- explorer
   use { 'kyazdani42/nvim-tree.lua'}
 
-  -- You can alias plugin names
-  use {'dracula/vim'}
+  use 'joshdick/onedark.vim'
+
+  -- Add git related info in the signs columns and popups
+  use {'lewis6991/gitsigns.nvim', requires = {'nvim-lua/plenary.nvim'} }
+
+  use {
+    'glepnir/galaxyline.nvim',
+      branch = 'main',
+      -- your statusline
+      config = function() require'my_statusline' end,
+      -- some optional icons
+      requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
+  -- telescope
+  use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
 end)
