@@ -1,5 +1,5 @@
 # DOTFILES 🗂
-## Development Environment - with one command💻
+## Development Environment - with one command 💻
 
 ![computer](https://raw.githubusercontent.com/msorce/msorce.github.io/master/computer.gif)
 
