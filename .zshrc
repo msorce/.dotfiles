@@ -14,3 +14,5 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 #PROMPT="%n@%m%~"
 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias luamake=/Users/msorce/.dotfiles/.config/nvim/lua-language-server/3rd/luamake/luamake

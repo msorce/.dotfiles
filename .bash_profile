@@ -1,4 +1,4 @@
-echo "from bash_profile"
+# echo "from bash_profile"
 # export MAVEN_OPTS="-Xmx2048m -Xms512m -Dorg.apache.maven.user-settings=/Users/"$USER"/.m2/settings.xml -Djava.net.preferIPv4Addresses=true"
 export PATH=/Users/"$USER"/apache-ant-1.10.1/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home
