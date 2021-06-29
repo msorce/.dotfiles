@@ -91,6 +91,8 @@ vim.api.nvim_set_keymap("n", "<leader>z", ":ZenMode<CR>",
 {noremap = true, silent = true})
 -- z = {"<cmd>TZAtaraxis<cr>", "toggle zen"}
 
+-- vim.api.nvim_set_keymap("n", "<leader>t", ":terminal<CR>", {noremap = true, silent = true})
+
 -- TODO create entire treesitter section
 
 local mappings = {
@@ -144,10 +146,10 @@ local mappings = {
 
     -- " Available Debug Adapters:
     -- "   https://microsoft.github.io/debug-adapter-protocol/implementors/adapters/
-    -- " 
+    -- "
     -- " Adapter configuration and installation instructions:
     -- "   https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation
-    -- " 
+    -- "
     -- " Debug Adapter protocol:
     -- "   https://microsoft.github.io/debug-adapter-protocol/
     -- " Debugging
@@ -296,4 +298,3 @@ end
 local wk = require("which-key")
 wk.register(mappings, opts)
 -- wk.register(visualMappings, visualOpts)
-

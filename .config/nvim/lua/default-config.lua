@@ -44,7 +44,7 @@ O = {
         debug = {active = false},
         bqf = {active = false},
         trouble = {active = false},
-        floatterm = {active = false},
+        floatterm = {active = true},
         spectre = {active = false},
         lsp_rooter = {active = false},
         markdown_preview = {active = false},
