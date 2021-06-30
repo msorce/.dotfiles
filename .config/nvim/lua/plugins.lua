@@ -10,7 +10,8 @@ return require('packer').startup(function(use)
 
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-
+    -- Autopairs
+    use {"windwp/nvim-autopairs"}
     -- lsp
     use {"neovim/nvim-lspconfig"}
     use {"hrsh7th/nvim-compe"}
@@ -23,6 +24,15 @@ return require('packer').startup(function(use)
             require("FTerm").setup()
         end
     }
+        -- Comments
+        use {
+            "terrortylor/nvim-comment",
+            cmd = "CommentToggle",
+            config = function()
+                require('nvim_comment').setup()
+            end
+        }
+
     -- whichkey
     use {"folke/which-key.nvim"}
 
