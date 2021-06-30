@@ -255,7 +255,11 @@ local mappings = {
         name = "Session",
         s = {"<cmd>SessionSave<cr>", "Save Session"},
         l = {"<cmd>SessionLoad<cr>", "Load Session"}
+    },
+    t = {
+        name = "Terminal"
     }
+    
     -- extras
     -- z = {
     --     name = "Zen",

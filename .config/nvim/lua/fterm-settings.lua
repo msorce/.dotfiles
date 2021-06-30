@@ -16,5 +16,5 @@ local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
 map('n', '<Leader>t', '<CMD>lua require("FTerm").toggle()<CR>', opts)
-map('t', '<Leader>t', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+map('t', '<Escape>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
 

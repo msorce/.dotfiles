@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use {"neovim/nvim-lspconfig"}
     use {"hrsh7th/nvim-compe"}
     use "windwp/nvim-spectre"
+    use "kabouzeid/nvim-lspinstall"
     -- Floating terminal
     use {
         "numtostr/FTerm.nvim",
@@ -40,10 +41,23 @@ return require('packer').startup(function(use)
         'glepnir/galaxyline.nvim',
         branch = 'main',
         -- your statusline
-        config = function() require'my_statusline' end,
+        -- config = function() require'my_statusline' end,
         -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-    -- telescope
+  use {
+        "romgrk/barbar.nvim",
+
+        config = function()
+            vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>',
+                                    {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>',
+                                    {noremap = true, silent = true})
+            vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>',
+                                    {noremap = true, silent = true})
+        end,
+        event = "BufRead"
+
+    }   -- telescope
     use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
 end)
