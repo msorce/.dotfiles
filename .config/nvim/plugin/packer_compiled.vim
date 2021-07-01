@@ -103,8 +103,11 @@ _G.packer_plugins = {
     path = "/Users/msorce/.local/share/nvim/site/pack/packer/opt/nvim-comment"
   },
   ["nvim-compe"] = {
-    loaded = true,
-    path = "/Users/msorce/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    after_files = { "/Users/msorce/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe.vim" },
+    config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\vconfig\rlv-compe\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/msorce/.local/share/nvim/site/pack/packer/opt/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -150,6 +153,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/msorce/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/msorce/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vim-vsnip-integ"] = {
+    loaded = true,
+    path = "/Users/msorce/.local/share/nvim/site/pack/packer/start/vim-vsnip-integ"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/Users/msorce/.local/share/nvim/site/pack/packer/start/which-key.nvim"
@@ -172,6 +183,7 @@ vim.cmd [[au!]]
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
 vim.cmd [[au BufRead * ++once lua require("packer.load")({'barbar.nvim'}, { event = "BufRead *" }, _G.packer_plugins)]]
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-compe'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end

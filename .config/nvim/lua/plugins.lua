@@ -14,9 +14,23 @@ return require('packer').startup(function(use)
     use {"windwp/nvim-autopairs"}
     -- lsp
     use {"neovim/nvim-lspconfig"}
-    use {"hrsh7th/nvim-compe"}
+    -- use {"hrsh7th/nvim-compe"}
+    use {
+        "hrsh7th/nvim-compe",
+        config = function()
+            require("lv-compe").config()
+        end,
+        event = "InsertEnter"
+    }
     use "windwp/nvim-spectre"
     use "kabouzeid/nvim-lspinstall"
+
+    -- snippets
+     -- TODO - Also verify if nvim-compe works with vsnip. I don't know how they work together.
+    use "hrsh7th/vim-vsnip"
+    use "hrsh7th/vim-vsnip-integ"   --
+    use "rafamadriz/friendly-snippets"
+
     -- Floating terminal
     use {
         "numtostr/FTerm.nvim",
@@ -24,14 +38,14 @@ return require('packer').startup(function(use)
             require("FTerm").setup()
         end
     }
-        -- Comments
-        use {
-            "terrortylor/nvim-comment",
-            cmd = "CommentToggle",
-            config = function()
-                require('nvim_comment').setup()
-            end
-        }
+    -- Comments
+    use {
+        "terrortylor/nvim-comment",
+        cmd = "CommentToggle",
+        config = function()
+            require('nvim_comment').setup()
+        end
+    }
 
     -- whichkey
     use {"folke/which-key.nvim"}
@@ -55,16 +69,16 @@ return require('packer').startup(function(use)
         -- some optional icons
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-  use {
+    use {
         "romgrk/barbar.nvim",
 
         config = function()
             vim.api.nvim_set_keymap('n', '<TAB>', ':BufferNext<CR>',
-                                    {noremap = true, silent = true})
+            {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<S-TAB>', ':BufferPrevious<CR>',
-                                    {noremap = true, silent = true})
+            {noremap = true, silent = true})
             vim.api.nvim_set_keymap('n', '<S-x>', ':BufferClose<CR>',
-                                    {noremap = true, silent = true})
+            {noremap = true, silent = true})
         end,
         event = "BufRead"
 
