@@ -25,3 +25,12 @@ cd .dotfiles/
 ./setup.sh
 ```
 
+Windows
+ - customize vscode controls to behave more like mac
+ - copy paste default kebind.json
+ - find and replace 
+ ```
+ctrl => a#lt
+alt => ctrl
+a#lt => alt
+```
