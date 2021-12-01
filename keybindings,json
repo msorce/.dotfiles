@@ -602,12 +602,12 @@
         "when": "editorFocus"
     },
     {
-        "key": "ctrl+down",
+        "key": "win+down",
         "command": "editor.action.moveLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+up",
+        "key": "win+up",
         "command": "editor.action.moveLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
     },
