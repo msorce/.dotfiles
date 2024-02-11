@@ -1,4 +1,4 @@
-# DOTFILES 🗂
+# DOTFILES 🗂 .
 ## Development Environment 💻
 
 ![computer](https://raw.githubusercontent.com/msorce/msorce.github.io/master/computer.gif)
